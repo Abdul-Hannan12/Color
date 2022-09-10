@@ -21,6 +21,7 @@
     border-radius: 50px;
     margin-bottom: 10px;
     margin-top: 10px;
+    position: fixed;
   }
   
   #txtbg{
@@ -28,4 +29,5 @@
     background: tan;
     padding: 10px;
     border-radius: 10px;
+    margin-top: 200px;
   }

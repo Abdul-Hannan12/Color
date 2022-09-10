@@ -1,20 +1,42 @@
+// DIVS
 let hexToRgb = document.getElementById("hexToRgbDiv");
 let rgbToHex = document.getElementById("rgbToHexDiv");
 
+// BUTTONS
+let btnHexToRgb = document.getElementById("btnHexToRgb");
+let btnRgbToHex = document.getElementById("btnRgbToHex");
+let hexConvertBtn = document.getElementById("convertHex");
+
+// INPUTS
+let inputHexToRgb = document.getElementById("hex");
+let inputRgbToHex = document.getElementById("rgb");
+
+btnHexToRgb.focus();
+
 let convertHex = ()=>{
-    alert("convertHex");
-    let hexInput = document.getElementById("hex");
-    if(!rgbToHex.style.display == "none"){
-        rgbToHex.style.transform = "translate(5000px, 0px)";
+    hexToRgb.classList.remove('hide');
+    rgbToHex.classList.add('hide');
+    btnHexToRgb.focus();
     }
-}
 
 let convertRgb = ()=>{
-    alert("convertRgb");
-    let rgbInput = document.getElementById("rgb");
-    if(!hexToRgb.style.display == none){
-        hexToRgb.style.transform = "translate(-5000px, 0px)";
+    hexToRgb.classList.add('hide');
+    rgbToHex.classList.remove('hide');
+    btnRgbToHex.focus();
+}
+
+let convert = (flag)=>{
+
+    if (flag == 0){
+        alert("0");
+            let hex = inputHexToRgb.value;
+            let rgb = hexToRgbFunction(hex);
+            // alert(rgb);
+            document.getElementById("rgbtxt").innerHTML = rgb;
+    } else{
+        alert("1");
     }
+
 }
 
     function colorToHex(color) {
