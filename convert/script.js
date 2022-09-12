@@ -9,7 +9,9 @@ let hexConvertBtn = document.getElementById("convertHex");
 
 // INPUTS
 let inputHexToRgb = document.getElementById("hex");
-let inputRgbToHex = document.getElementById("rgb");
+let inputRgbToHex1 = document.getElementById("rgb1");
+let inputRgbToHex2 = document.getElementById("rgb2");
+let inputRgbToHex3 = document.getElementById("rgb3");
 
 btnHexToRgb.focus();
 
@@ -28,13 +30,22 @@ let convertRgb = ()=>{
 let convert = (flag)=>{
 
     if (flag == 0){
-        alert("0");
             let hex = inputHexToRgb.value;
-            let rgb = hexToRgbFunction(hex);
-            // alert(rgb);
-            document.getElementById("rgbtxt").innerHTML = rgb;
+            let rgb;
+            if (hex.startsWith("#")){
+                rgb = hexToRgbFunction(hex);
+            }else{
+                rgb = hexToRgbFunction("#"+hex);
+            }
+            if(hex != ""){
+                document.getElementById("rgbtxt").innerHTML = rgb;
+            }
     } else{
-        alert("1");
+            let r = inputRgbToHex1.value;
+            let g = inputRgbToHex2.value;
+            let b = inputRgbToHex3.value;
+            let hex = rgbToHexFunction(r, g, b);
+            document.getElementById("hextxt").innerHTML = hex;
     }
 
 }

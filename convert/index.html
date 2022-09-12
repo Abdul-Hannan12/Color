@@ -29,7 +29,12 @@
         </div>
 
         <div class="containerdiv show hide" id="rgbToHexDiv">
-            <input class="input" id="rgb" type="text" placeholder="rgb" autocomplete="off">
+            <div class="rgbInputs">
+                <input class="input" id="rgb1" type="number" placeholder="r" autocomplete="off">
+                <input class="input" id="rgb2" type="number" placeholder="g" autocomplete="off">
+                <input class="input" id="rgb3" type="number" placeholder="b" autocomplete="off">
+            </div>
+            <button class="btn_convert" onclick="convert(1)"><b>Convert</b></button>
             <h2 id = "hextxt" class="txt">#</h2>
         </div>
 
