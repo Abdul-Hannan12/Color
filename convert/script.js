@@ -44,7 +44,6 @@ let convert = (flag)=>{
             let r = parseInt(inputRgbToHex1.value);
             let g = parseInt(inputRgbToHex2.value);
             let b = parseInt(inputRgbToHex3.value);
-            alert(g);
             let hex = rgbToHexFunction(r, g, b);
             document.getElementById("hextxt").innerHTML = hex;
     }
